@@ -19,7 +19,7 @@ jobs:
       packages: write
     env:
       IMAGE_NAME: linux_tweet_app
-      PROJECT_ID: service-project-ardhan-1
+      PROJECT_ID: teg-cloud-bfsi-uk1
 
     steps:
       - name: Checkout repository
