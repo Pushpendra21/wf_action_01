@@ -40,12 +40,12 @@ jobs:
         
       - name: Push Docker Image to Container Registry GCR
         env: 
-          GIT_TAG: v0.1.0
+          GIT_TAG: v0.1.1
         run: |-
-          docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
-          docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:GIT_TAG
-          docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
-          docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
+          docker tag $IMAGE_NAME:latest asia.gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
+          docker tag $IMAGE_NAME:latest asia.gcr.io/$PROJECT_ID/$IMAGE_NAME:GIT_TAG
+          docker push asia.gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
+          docker push asia.gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
           
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
